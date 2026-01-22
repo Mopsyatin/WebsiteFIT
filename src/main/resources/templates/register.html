@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Create a Bloom Lab account."/>
+    <title>Bloom Lab | Register</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="/" aria-label="Bloom Lab home">
+      <img class="brand-logo" src="../static/img/brand/bloomlab-logo.png" th:src="@{/img/brand/bloomlab-logo.png}" alt="Bloom Lab logo">
+      <span class="brand-text">
+        <span class="brand-name">Bloom Lab</span>
+        <span class="brand-sub">Ballina, Co. Mayo</span>
+      </span>
+    </a>
+
+        <nav class="nav" aria-label="Primary">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/shop">Shop</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="pill" href="/cart" aria-label="Cart">Cart
+            <span class="pill-badge" aria-label="Items in cart"
+                th:text="${cartItemCount}">0</span></a>
+            <a class="pill ghost" href="/login">Login</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container page">
+            <div class="auth">
+                <div class="auth-wrap">
+                    <div class="card auth-card">
+                        <div class="card-body">
+                            <h1>Create your account</h1>
+                            <p class="muted">A faster checkout and order updates, all in one place.</p>
+
+                            <form class="form" method="post" action="/register">
+                                <input type="hidden" th:if="${_csrf}" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+
+                                <div class="field">
+                                    <label for="name">Full name</label>
+                                    <input id="name" name="name" type="text" autocomplete="name" required />
+                                </div>
+                                <div class="field">
+                                    <label for="email">Email</label>
+                                    <input id="email" name="email" type="email" autocomplete="email" required />
+                                </div>
+                                <div class="field">
+                                    <label for="password">Password</label>
+                                    <input id="password" name="password" type="password" autocomplete="new-password" required />
+                                    <div class="hint">Use at least 8 characters.</div>
+                                </div>
+                                <button class="btn" type="submit">Create account</button>
+                            </form>
+
+                            <div class="auth-foot">
+                                <span class="muted">Already have an account?</span>
+                                <a class="link" href="/login">Login</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <aside class="auth-side">
+                        <div class="side-card">
+                            <h2>Bloom Lab</h2>
+                            <p class="muted">Local delivery in Ballina and nearby areas, with a premium, calm experience.</p>
+                            <div class="mini-feats">
+                                <div class="mini">Freshness guarantee</div>
+                                <div class="mini">Phone: +353 85 123 4567</div>
+                                <div class="mini">Email: orders@bloomlab.ie</div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <div class="footer-brand">Bloom Lab</div>
+            <p class="muted">A boutique florist delivering in Ballina, Co. Mayo. Designed for comfort, clarity, and calm.</p>
+        </div>
+        <div>
+            <div class="footer-title">Help</div>
+            <a class="footer-link" href="/contact">Contact</a>
+            <a class="footer-link" href="/about">About</a>
+        </div>
+        <div>
+            <div class="footer-title">Contact</div>
+            <p class="muted">Phone: +353 85 123 4567<br/>Email: orders@bloomlab.ie</p>
+        </div>
+    </div>
+    <div class="container footer-bottom"><span class="muted">© 2026 Bloom Lab</span></div>
+</footer>
+
+<script src="../static/js/site.js" th:src="@{/js/site.js}" defer></script>
+</body>
+</html>

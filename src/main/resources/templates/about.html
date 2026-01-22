@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="About"/>
+    <title>Bloom Lab | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="/" aria-label="Bloom Lab home">
+      <img class="brand-logo" src="../static/img/brand/bloomlab-logo.png" th:src="@{/img/brand/bloomlab-logo.png}" alt="Bloom Lab logo">
+      <span class="brand-text">
+        <span class="brand-name">Bloom Lab</span>
+        <span class="brand-sub">Ballina, Co. Mayo</span>
+      </span>
+    </a>
+
+        <nav class="nav" aria-label="Primary">
+            <a class="nav-link" href="/">Home</a>
+            <a class="nav-link" href="/shop">Shop</a>
+            <a class="nav-link active" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="pill" href="/cart" aria-label="Cart">Cart
+            <span class="pill-badge" aria-label="Items in cart"
+                th:text="${cartItemCount}">0</span></a>
+            <a class="pill ghost" href="/login">Login</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="section">
+        <div class="container page">
+            <h1>About Bloom Lab</h1>
+            <p class="lead">A calm, boutique florist in Ballina, Co. Mayo. Thoughtful stems, beautifully wrapped, delivered with care.</p>
+
+            <div class="story-grid">
+                <div class="card soft-card">
+                    <div class="card-body">
+                        <h3>Our style</h3>
+                        <p class="muted">Soft, premium palettes and seasonal flowers, arranged to feel natural and effortless. Every bouquet is hand-tied and finished with a clean wrap and ribbon.</p>
+                    </div>
+                </div>
+                <div class="card soft-card">
+                    <div class="card-body">
+                        <h3>Local delivery</h3>
+                        <p class="muted">We deliver across Ballina and nearby towns. Clear delivery windows, careful handling, and real updates if anything changes.</p>
+                    </div>
+                </div>
+                <div class="card soft-card">
+                    <div class="card-body">
+                        <h3>Freshness guarantee</h3>
+                        <p class="muted">Prepared close to delivery, stored properly, and packed for the Irish weather. If something isn’t right, we’ll make it right.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="split" style="margin-top:18px;">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>What we do</h2>
+                        <p class="muted">From birthdays and anniversaries to sympathy arrangements and everyday surprises, Bloom Lab focuses on comfortable, easy ordering and bouquets that look even better in person.</p>
+                        <div class="testimonials">
+                            <div class="quote">
+                                “The bouquet was exactly what I hoped for. Soft, elegant, and delivered right on time.”
+                                <div class="quote-by">Local customer</div>
+                            </div>
+                            <div class="quote">
+                                “Loved the wrap and the colours. Looked premium without being over the top.”
+                                <div class="quote-by">Ballina</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Ordering & delivery</h2>
+                        <div class="summary-lines">
+                            <div class="summary-line"><span class="pill-badge">1</span><div><strong>Choose a bouquet</strong><div class="muted small">Seasonal designs updated regularly.</div></div><div class="muted">Shop</div></div>
+                            <div class="summary-line"><span class="pill-badge">2</span><div><strong>Add a message</strong><div class="muted small">Gift note included with every order.</div></div><div class="muted">Cart</div></div>
+                            <div class="summary-line"><span class="pill-badge">3</span><div><strong>Delivery details</strong><div class="muted small">Ballina & nearby areas.</div></div><div class="muted">Checkout</div></div>
+                        </div>
+                        <div class="callout">
+                            <div>
+                                <div class="footer-title" style="margin:0 0 6px;">Need help choosing?</div>
+                                <div class="muted small">Call +353 85 123 4567 or email orders@bloomlab.ie</div>
+                            </div>
+                            <a class="btn btn-small" href="/contact">Contact us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <div class="footer-brand">Bloom Lab</div>
+            <p class="muted">A boutique florist delivering in Ballina, Co. Mayo. Designed for comfort, clarity, and calm.</p>
+            <div class="footer-badges"><span class="badge">Fresh guarantee</span><span class="badge">Hand-tied bouquets</span><span class="badge">Local delivery</span></div>
+        </div>
+        <div>
+            <div class="footer-title">Shop</div>
+            <a class="footer-link" href="/shop">Birthday</a>
+            <a class="footer-link" href="/shop">Romantic</a>
+            <a class="footer-link" href="/shop">Sympathy</a>
+        </div>
+        <div>
+            <div class="footer-title">Help</div>
+            <a class="footer-link" href="/#faq">FAQ</a>
+            <a class="footer-link" href="/contact">Contact</a>
+            <a class="footer-link" href="/about">About</a>
+        </div>
+        <div>
+            <div class="footer-title">Contact</div>
+            <p class="muted">Ballina, Co. Mayo<br/>Mon-Sat: 9:00-17:30<br/>Sun: Closed</p>
+            <p class="muted">Phone: +353 85 123 4567<br/>Email: orders@bloomlab.ie</p>
+        </div>
+    </div>
+    <div class="container footer-bottom"><span class="muted">© 2026 Bloom Lab</span></div>
+</footer>
+
+<script src="../static/js/site.js" th:src="@{/js/site.js}" defer></script>
+</body>
+</html>

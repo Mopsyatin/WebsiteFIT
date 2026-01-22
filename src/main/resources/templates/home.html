@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Bloom Lab is a boutique florist delivering in Ballina and nearby areas."/>
+    <title>Bloom Lab | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav-row">
+    <a class="brand" href="/" aria-label="Bloom Lab home">
+      <img class="brand-logo" src="../static/img/brand/bloomlab-logo.png" th:src="@{/img/brand/bloomlab-logo.png}" alt="Bloom Lab logo">
+      <span class="brand-text">
+        <span class="brand-name">Bloom Lab</span>
+        <span class="brand-sub">Ballina, Co. Mayo</span>
+      </span>
+    </a>
+
+        <nav class="nav" aria-label="Primary">
+            <a class="nav-link active" href="/">Home</a>
+            <a class="nav-link" href="/shop">Shop</a>
+            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/contact">Contact</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a class="pill" href="/cart" aria-label="Cart">Cart
+            <span class="pill-badge" aria-label="Items in cart"
+                th:text="${cartItemCount}">0</span></a>
+            <a class="pill ghost" href="/login">Login</a>
+        </div>
+    </div>
+
+    <div class="top-banner">
+        <div class="container banner-row">
+            <div class="banner-item"><span class="dot dot-sage" aria-hidden="true"></span>Delivering in <strong>Ballina & nearby areas</strong></div>
+            <div class="banner-item"><span class="dot dot-blush" aria-hidden="true"></span>Freshness guarantee</div>
+            <div class="banner-item"><span class="dot dot-beige" aria-hidden="true"></span>Secure checkout</div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="kicker">Boutique florist in Ballina, Co. Mayo</p>
+                <h1>Thoughtful bouquets, beautifully wrapped.</h1>
+                <p class="lead">Warm, premium flowers for birthdays, sympathy, romance and everyday moments. Delivered across Ballina and nearby areas.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="/shop">Shop Bouquets</a>
+                    <a class="btn btn-ghost" href="/about">Our story</a>
+                </div>
+
+                <div class="trust-row">
+                    <div class="trust-card"><div class="trust-title">Fresh guarantee</div><div class="muted">Prepared on the day and handled with care.</div></div>
+                    <div class="trust-card"><div class="trust-title">Local delivery</div><div class="muted">Ballina and nearby towns, with clear pricing.</div></div>
+                    <div class="trust-card"><div class="trust-title">Secure checkout</div><div class="muted">Clear, step-by-step checkout with delivery details and order confirmation.</div></div>
+                </div>
+            </div>
+
+            <div class="hero-media" aria-label="Featured bouquet">
+                <div class="photo-card">
+                    <img class="hero-photo" src="../static/img/red-rose-bouquet.jpg" th:src="@{/img/red-rose-bouquet.jpg}" alt="Red and pink rose bouquet" loading="eager" />
+                    <div class="photo-caption">
+                        <div class="photo-title">Rose Bouquet</div>
+                        <div class="muted">Hand-wrapped, bold and romantic.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container section-head">
+            <h2>Best sellers</h2>
+            <p class="muted">Our most-loved bouquets, designed to feel special and effortless.</p>
+            <a class="link" href="/shop">View all</a>
+        </div>
+
+        <div class="container grid">
+            <a class="card product-card" href="/shop?category=Romantic&sort=asc">
+                <div class="card-media"><img src="../static/img/products/bouquet-blush-roses.jpg" th:src="@{/img/products/bouquet-blush-roses.jpg}" alt="Blush Rose Bouquet"/></div>
+                <div class="card-body">
+                    <div class="card-title">Blush Rose Bouquet</div>
+                    <div class="card-meta"><span class="pill-mini">Romantic</span><span class="price">€39.00</span></div>
+                    <p class="muted clamp-2">Soft blush roses, hand-tied and ribbon-finished.</p>
+                </div>
+            </a>
+
+            <a class="card product-card" href="/shop?category=Calm&sort=asc">
+                <div class="card-media"><img src="../static/img/products/bouquet-ivory-garden.jpg" th:src="@{/img/products/bouquet-ivory-garden.jpg}" alt="Ivory Garden Bouquet"/></div>
+                <div class="card-body">
+                    <div class="card-title">Ivory Garden Bouquet</div>
+                    <div class="card-meta"><span class="pill-mini">Calm</span><span class="price">€46.00</span></div>
+                    <p class="muted clamp-2">Ivory roses with baby's breath and eucalyptus.</p>
+                </div>
+            </a>
+
+            <a class="card product-card" href="/shop?category=Classic&sort=asc">
+                <div class="card-media"><img src="../static/img/products/bouquet-red-romance.jpg" th:src="@{/img/products/bouquet-red-romance.jpg}" alt="Red Rose Classic"/></div>
+                <div class="card-body">
+                    <div class="card-title">Red Rose Classic</div>
+                    <div class="card-meta"><span class="pill-mini">Classic</span><span class="price">€49.00</span></div>
+                    <p class="muted clamp-2">Deep red roses with baby's breath. Bold and timeless.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <section class="section soft">
+        <div class="container delivery-banner">
+            <div>
+                <h3>Delivering in Ballina & nearby areas</h3>
+                <p class="muted">Choose a delivery date at checkout. Add a message card for free.</p>
+            </div>
+            <a class="btn btn-ghost" href="/contact">Delivery questions</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container split">
+            <div>
+                <h2>Kind words from customers</h2>
+                <p class="muted">Example testimonials to create comfort and confidence.</p>
+                <div class="testimonials">
+                    <div class="quote">“Absolutely gorgeous bouquet, delivered on time and wrapped beautifully.”<div class="quote-by">Mary, Ballina</div></div>
+                    <div class="quote">“So easy to order. The flowers lasted ages and looked premium.”<div class="quote-by">Kevin, Co. Mayo</div></div>
+                    <div class="quote">“Lovely for sympathy flowers, tasteful, calm, and respectful.”<div class="quote-by">Aoife, Ballina</div></div>
+                </div>
+            </div>
+
+            <div id="faq" class="faq">
+                <h2>FAQ</h2>
+                <details open><summary>Where do you deliver?</summary><p>We deliver in Ballina and nearby areas. If you’re unsure, send us a message and we’ll confirm quickly.</p></details>
+                <details><summary>How fresh are the flowers?</summary><p>We prepare bouquets on the day where possible, with a focus on premium presentation and longevity.</p></details>
+                <details><summary>Is checkout secure?</summary><p>Checkout is designed to be clear and secure, with delivery details and order confirmation. Your payment options are shown during checkout.</p></details>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <div class="footer-brand">Bloom Lab</div>
+            <p class="muted">A boutique florist delivering in Ballina, Co. Mayo. Designed for comfort, clarity, and calm.</p>
+            <div class="footer-badges"><span class="badge">Fresh guarantee</span><span class="badge">Hand-tied bouquets</span><span class="badge">Local delivery</span></div>
+        </div>
+        <div>
+            <div class="footer-title">Shop</div>
+            <a class="footer-link" href="/shop">Birthday</a>
+            <a class="footer-link" href="/shop">Romantic</a>
+            <a class="footer-link" href="/shop">Sympathy</a>
+        </div>
+        <div>
+            <div class="footer-title">Help</div>
+            <a class="footer-link" href="/#faq">FAQ</a>
+            <a class="footer-link" href="/contact">Contact</a>
+            <a class="footer-link" href="/about">About</a>
+        </div>
+        <div>
+            <div class="footer-title">Contact</div>
+            <p class="muted">Ballina, Co. Mayo<br/>Mon-Sat: 9:00-17:30<br/>Sun: Closed</p>
+            <p class="muted">Phone: +353 85 123 4567<br/>Email: orders@bloomlab.ie</p>
+        </div>
+    </div>
+    <div class="container footer-bottom"><span class="muted">© 2026 Bloom Lab</span></div>
+</footer>
+
+<script src="../static/js/site.js" th:src="@{/js/site.js}" defer></script>
+</body>
+</html>

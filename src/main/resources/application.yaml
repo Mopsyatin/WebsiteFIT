@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: flower-website
+
+  profiles:
+    active: dev # по умолчанию
+
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+
+  jpa:
+    properties:
+      hibernate:
+        default_schema: public
+        format_sql: true
+
+server:
+  port: 8081
